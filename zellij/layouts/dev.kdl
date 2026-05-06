@@ -1,0 +1,9 @@
+layout {
+    pane split_direction="vertical" {
+        pane command="nvim" size="65%" name="Neovim" close_on_exit=false start_suspended=false
+        pane command="codex" size="45%" name="Codex" close_on_exit=false start_suspended=false
+    }
+    pane size=1 borderless=true {
+        plugin location="tab-bar"
+    }
+}

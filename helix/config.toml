@@ -1,0 +1,60 @@
+theme = "catppuccin_mocha_transparent"
+
+[editor]
+auto-completion = true
+line-number = "relative"
+cursorline = true
+true-color = true
+# rulers = [80]
+color-modes = true
+default-yank-register = "+"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-inlay-hints = false
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.soft-wrap]
+enable = false
+
+[editor.indent-guides]
+render = true
+
+[editor.statusline]
+left = ["mode", "file-name", "spinner", "file-modification-indicator"]
+right = [
+  "diagnostics",
+  "version-control",
+  "position",
+]
+
+[editor.statusline.mode]
+normal = "N"
+insert = "I"
+select = "S"
+
+[keys.normal]
+# D = ["kill_to_line_end"]
+# "{" = ["goto_prev_paragraph"]
+# "}" = ["goto_next_paragraph"]
+# "G" = "goto_file_end"
+"K" = "hover"
+# esc = ["collapse_selection"]
+" " = { "|" = ":vsplit", "-" = ":hsplit" }
+# "[" = { b = ":buffer-previous" }
+# "]" = { b = ":buffer-next" }
+
+# [keys.insert]
+# esc = ["collapse_selection", "normal_mode"]
+
+# [keys.select]
+# "G" = "extend_to_file_end"
+

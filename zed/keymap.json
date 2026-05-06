@@ -1,0 +1,116 @@
+[
+  // Pane splitting
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space -": "pane::SplitDown",
+      "space |": "pane::SplitRight",
+      "space \\": "pane::SplitRight",
+    },
+  },
+
+  // Tools
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space r": "projects::OpenRecent",
+      "space b": "tab_switcher::Toggle",
+      "space p": "pane::TogglePinTab",
+      "space g d": "git::Diff",
+
+      "alt-x": "pane::CloseActiveItem",
+
+      "ctrl-`": "terminal_panel::Toggle",
+      "ctrl-g": "git_panel::Toggle",
+      "ctrl-a": "agent::Toggle",
+      "ctrl-e": "project_panel::Toggle",
+
+      "g s": "outline::Toggle",
+      "g c": ["editor::ToggleComments", { "advance_downwards": false }],
+    },
+  },
+
+  // Git UI
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "ctrl-g": "git_panel::Close",
+      "q": "git_panel::Close",
+      "d": "git::Diff",
+    },
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "q": "pane::CloseActiveItem",
+    },
+  },
+
+  // Agent UI
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-a": "workspace::ToggleRightDock",
+    },
+  },
+
+  // Terminal
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-`": "terminal_panel::Toggle",
+      "ctrl-g": "git_panel::Toggle",
+      "ctrl-e": "project_panel::Toggle",
+    },
+  },
+
+  // Filetree
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-e": "workspace::ToggleLeftDock",
+      "q": "workspace::ToggleLeftDock",
+    },
+  },
+
+  // Pane switching
+  {
+    "context": "Editor || Terminal || Dock",
+    "bindings": {
+      "alt-h": "workspace::ActivatePaneLeft",
+      "alt-l": "workspace::ActivatePaneRight",
+      "alt-k": "workspace::ActivatePaneUp",
+      "alt-j": "workspace::ActivatePaneDown",
+    },
+  },
+
+  // Tab switcher
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "q": "tab_switcher::CloseSelectedItem",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+    },
+  },
+
+  // Completion menu
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "enter": "editor::ConfirmCompletion",
+    },
+  },
+
+  // Markdown navigation
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+    },
+  },
+]

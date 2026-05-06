@@ -1,0 +1,126 @@
+
+keybinds clear-defaults=true {
+  shared_except "locked" {
+    bind "Ctrl g" { SwitchToMode "Locked"; }
+  }
+
+  locked {
+    bind "Ctrl g" { SwitchToMode "Normal"; }
+  }
+
+  shared {
+      bind "Ctrl q" { Quit; }
+  }
+
+  normal {
+    bind "Ctrl l" { Write 99; Write 108; Write 101; Write 97; Write 114; Write 13; }
+    bind "Alt \\" { NewPane "Right"; }
+    bind "Alt -" { NewPane "Down"; }
+
+    bind "Alt x" { CloseFocus; }
+
+    bind "Alt o" { LaunchOrFocusPlugin "session-manager"; }
+
+    bind "Alt r" { SwitchToMode "Resize"; }
+
+    bind "Alt p" { SwitchToMode "Pane"; }
+
+    bind "Alt m" { SwitchToMode "Move"; }
+
+    bind "Alt t" { SwitchToMode "Tab"; }
+
+    bind "Alt b" { SwitchToMode "Pane"; }
+
+    bind "Alt [" { GoToPreviousTab; }
+    bind "Alt ]" { GoToNextTab; }
+    bind "Alt 1" { GoToTab 1; }
+    bind "Alt 2" { GoToTab 2; }
+    bind "Alt 3" { GoToTab 3; }
+    bind "Alt 4" { GoToTab 4; }
+    bind "Alt 5" { GoToTab 5; }
+    bind "Alt 6" { GoToTab 6; }
+    bind "Alt 7" { GoToTab 7; }
+    bind "Alt 8" { GoToTab 8; }
+    bind "Alt 9" { GoToTab 9; }
+
+    bind "Alt h" { MoveFocus "Left"; }
+    bind "Alt j" { MoveFocus "Down"; }
+    bind "Alt k" { MoveFocus "Up"; }
+    bind "Alt l" { MoveFocus "Right"; }
+
+    bind "Alt f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+
+    bind "Alt Shift f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+  }
+
+  resize {
+    bind "h" { Resize "Increase Left"; }
+    bind "j" { Resize "Increase Down"; }
+    bind "k" { Resize "Increase Up"; }
+    bind "l" { Resize "Increase Right"; }
+    bind "Esc" { SwitchToMode "Normal"; }
+  }
+
+  pane {
+    bind "h" "Left" { MoveFocus "Left"; }
+    bind "j" "Down" { MoveFocus "Down"; }
+    bind "k" "Up" { MoveFocus "Up"; }
+    bind "l" "Right" { MoveFocus "Right"; }
+    bind "p" { SwitchFocus; }
+    bind "n" { NewPane; SwitchToMode "Normal"; }
+    bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
+    bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
+    bind "x" { CloseFocus; SwitchToMode "Normal"; }
+    bind "i" { TogglePanePinned; SwitchToMode "Normal"; }
+    bind "Esc" { SwitchToMode "Normal"; }
+  }
+
+  move {
+    bind "n" { MovePane; }
+    bind "p" { MovePaneBackwards; }
+    bind "h" "Left" { MovePane "Left"; }
+    bind "j" "Down" { MovePane "Down"; }
+    bind "k" "Up" { MovePane "Up"; }
+    bind "l" "Right" { MovePane "Right"; }
+    bind "Esc" { SwitchToMode "Normal"; }
+  }
+
+  tab {
+    bind "h" "Left" "Up" "k" { GoToPreviousTab; }
+    bind "l" "Right" "Down" "j" { GoToNextTab; }
+    bind "n" { NewTab; SwitchToMode "Normal"; }
+    bind "x" { CloseTab; SwitchToMode "Normal"; }
+    bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+    bind "Esc" { SwitchToMode "Normal"; }
+  }
+
+  renametab {
+    bind "Enter" { SwitchToMode "Normal"; }
+    bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
+   }
+
+}
+
+theme "catppuccin-mocha"
+
+env {
+  DEFAULT_SHELL "fish";
+}
+
+terminal {
+  sixel true;
+}
+// ui {
+//     pane_frames {
+//         hide_session_name true
+//     }
+// }
+
+default_layout "compact"
+session_serialization true
+serialize_pane_viewport true
+scrollback_lines_to_serialize 10000
+show_startup_tips false
+pane_frames true
+
+
