@@ -16,7 +16,7 @@
       "favorite_config_option_values": {},
     },
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "show_edit_predictions": false,
 
   // Editor Behaviour & Navigation
@@ -129,6 +129,8 @@
     "delay_ms": 100,
   },
   "agent": {
+    "enable_feedback": false,
+    "dock": "right",
     "button": false,
   },
   "toolbar": {
@@ -142,6 +144,7 @@
     "dock": "right",
   },
   "terminal": {
+    "font_size": 13.0,
     "font_family": "BlexMono Nerd Font Mono",
     "font_weight": 400.0,
     "dock": "bottom",
@@ -151,6 +154,7 @@
     "button": false,
   },
   "git_panel": {
+    "dock": "left",
     "tree_view": false,
     "button": false,
   },
@@ -191,6 +195,7 @@
   "gutter": {
     "line_numbers": true,
     "folds": false,
+    "runnables": false,
   },
   "title_bar": {
     "show_sign_in": false,
@@ -220,8 +225,8 @@
   "buffer_font_size": 13.0,
   "buffer_font_family": "BlexMono Nerd Font Mono",
   "buffer_font_weight": 500.0,
-  "buffer_line_height": "comfortable",
-  "theme": "Catppuccin Mocha (Blur) [Heavy]",
+  "buffer_line_height": "standard",
+  "theme": "Catppuccin Mocha - No Italics",
   "icon_theme": "Colored Zed Icons Theme Dark",
 
   "theme_overrides": {

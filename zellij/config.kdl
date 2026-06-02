@@ -121,6 +121,6 @@ session_serialization true
 serialize_pane_viewport true
 scrollback_lines_to_serialize 10000
 show_startup_tips false
-pane_frames true
+pane_frames false
 
 

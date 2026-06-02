@@ -11,8 +11,6 @@
     "custom/separator",
     "temperature",
     "custom/separator",
-    "battery",
-    "custom/separator",
   ],
   "modules-center": [
     "clock",
@@ -20,6 +18,8 @@
     "custom/weather"
   ],
   "modules-right": [
+    "custom/separator",
+    "battery",
     "custom/separator",
     "custom/bluetooth",
     "custom/bluetooth-separator",
@@ -109,7 +109,7 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰅶",
+    "format-muted": "Muted",
     "format-icons": {
       "headphone": "",
       "hands-free": "󰋎",
@@ -152,12 +152,12 @@
 
   "network": {
     "max-length": 24,
-    "format-wifi": " {essid}",
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "format-linked": "{ifname} (No IP) 󰊗",
-    "format-disconnected": "No connection",
-    "tooltip-format-disconnected": "Disconnected",
+    "format-wifi": " {essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "format-linked": "{ifname} (No IP) 󰊗 ",
+    "format-disconnected": "No connection ",
+    "tooltip-format-disconnected": "Disconnected ",
     "on-click": "$HOME/.config/waybar/network-manager.sh"
   },
 

@@ -317,6 +317,7 @@ symbol = "swift "
 
 [typst]
 symbol = "typst "
+style = "#209fb5"
 
 [vagrant]
 symbol = "vagrant "
