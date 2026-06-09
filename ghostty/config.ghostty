@@ -22,12 +22,12 @@ selection-background = 353749
 selection-foreground = cdd6f4
 split-divider-color = 313244
 
-font-family = BlexMono Nerd Font Mono Medium
+font-family = JetBrainsMono NFM SemiBold
 window-decoration = none
 font-size = 10.5
 mouse-hide-while-typing = true
 cursor-style = block
-background-opacity = 1
+background-opacity = 0.93
 
 scrollbar = never
 maximize = true

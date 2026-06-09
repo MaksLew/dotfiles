@@ -19,8 +19,6 @@
       "space p": "pane::TogglePinTab",
       "space g d": "git::Diff",
 
-      "space j j": ["task::Spawn", { "task_name": "jjui" }],
-
       "g w": "vim::HelixJumpToWord",
 
       "alt-x": "pane::CloseActiveItem",

@@ -52,7 +52,7 @@
     "tooltip": false
   },
 
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{icon}",
@@ -67,6 +67,9 @@
       "8": "8",
       "9": "9",
       "urgent": "!",
+      "active": "{value}",
+      "focused": "{value}",
+      "empty": "{value}",
       "default": "{name}"
     }
   },

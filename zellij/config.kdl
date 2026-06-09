@@ -116,11 +116,10 @@ terminal {
 //     }
 // }
 
-default_layout "compact"
+default_layout "catppuccin-compact"
 session_serialization true
 serialize_pane_viewport true
 scrollback_lines_to_serialize 10000
 show_startup_tips false
 pane_frames false
-
 
