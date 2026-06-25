@@ -31,5 +31,9 @@ background-opacity = 0.93
 
 scrollbar = never
 maximize = true
-command = /usr/bin/fish --login --interactive
-shell-integration = fish
+command = /usr/bin/fish --interactive
+
+gtk-single-instance = true
+
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 30m
