@@ -1,4 +1,5 @@
 {
+  "bento.nvim": { "branch": "feat/v2", "commit": "08054c6cd3cfb1246f1bfbc74b04e1587f476003" },
   "blink.cmp": { "branch": "main", "commit": "4b18c32adef2898f95cdef6192cbd5796c1a332d" },
   "catppuccin": { "branch": "main", "commit": "0a5de4da015a175f416d6ef1eda84661623e0500" },
   "conform.nvim": { "branch": "master", "commit": "c2526f1cde528a66e086ab1668e996d162c75f4f" },
