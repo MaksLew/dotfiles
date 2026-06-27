@@ -6,7 +6,6 @@ set -g fish_greeting ''
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias :q="exit"
 alias zlj="zellij"
 alias cd="z"
 alias ff="fastfetch"

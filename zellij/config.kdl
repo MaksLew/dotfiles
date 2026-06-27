@@ -8,10 +8,6 @@ keybinds clear-defaults=true {
     bind "Ctrl g" { SwitchToMode "Normal"; }
   }
 
-  shared {
-      bind "Ctrl q" { Quit; }
-  }
-
   normal {
     bind "Ctrl l" { Write 99; Write 108; Write 101; Write 97; Write 114; Write 13; }
     bind "Alt \\" { NewPane "Right"; }
@@ -30,6 +26,8 @@ keybinds clear-defaults=true {
     bind "Alt t" { SwitchToMode "Tab"; }
 
     bind "Alt b" { SwitchToMode "Pane"; }
+
+    bind "Alt s" { SwitchToMode "Session"; }
 
     bind "Alt [" { GoToPreviousTab; }
     bind "Alt ]" { GoToNextTab; }
@@ -51,6 +49,12 @@ keybinds clear-defaults=true {
     bind "Alt f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
 
     bind "Alt Shift f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+  }
+
+  session {
+    bind "d" { Detach; }
+    bind "q" { Quit; }
+    bind "Esc" { SwitchToMode "Normal"; }
   }
 
   resize {
@@ -110,15 +114,10 @@ env {
 terminal {
   sixel true;
 }
-// ui {
-//     pane_frames {
-//         hide_session_name true
-//     }
-// }
 
 default_layout "catppuccin-compact"
 session_serialization true
-serialize_pane_viewport true
+pane_viewport_serialization false
 scrollback_lines_to_serialize 10000
 show_startup_tips false
 pane_frames false
