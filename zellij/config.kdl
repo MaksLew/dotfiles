@@ -49,6 +49,15 @@ keybinds clear-defaults=true {
     bind "Alt f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
 
     bind "Alt Shift f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+
+    bind "Alt g" {
+        Run "jjui" {
+            floating true
+            width "90%"
+            height "90%"
+            close_on_exit true
+        }
+    }
   }
 
   session {
@@ -121,4 +130,3 @@ pane_viewport_serialization false
 scrollback_lines_to_serialize 10000
 show_startup_tips false
 pane_frames false
-
