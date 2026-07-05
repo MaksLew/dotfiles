@@ -42,19 +42,19 @@ insert = "I"
 select = "S"
 
 [keys.normal]
-# D = ["kill_to_line_end"]
-# "{" = ["goto_prev_paragraph"]
-# "}" = ["goto_next_paragraph"]
-# "G" = "goto_file_end"
+D = ["kill_to_line_end"]
+"{" = ["goto_prev_paragraph"]
+"}" = ["goto_next_paragraph"]
+"G" = "goto_file_end"
 "K" = "hover"
-# esc = ["collapse_selection"]
+esc = ["collapse_selection"]
 " " = { "|" = ":vsplit", "-" = ":hsplit" }
-# "[" = { b = ":buffer-previous" }
-# "]" = { b = ":buffer-next" }
+"[" = { b = ":buffer-previous" }
+"]" = { b = ":buffer-next" }
 
-# [keys.insert]
-# esc = ["collapse_selection", "normal_mode"]
+[keys.insert]
+esc = ["collapse_selection", "normal_mode"]
 
-# [keys.select]
-# "G" = "extend_to_file_end"
+[keys.select]
+"G" = "extend_to_file_end"
 
