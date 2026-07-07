@@ -7,6 +7,7 @@ opt.termguicolors = true
 opt.scrolloff = 10
 opt.signcolumn = "yes:2"
 opt.cursorline = true
+opt.showmode = false
 opt.laststatus = 3
 vim.cmd([[
     highlight Normal guibg=NONE ctermbg=NONE
@@ -15,7 +16,6 @@ vim.cmd([[
 
 vim.diagnostic.config({
 	signs = false,
-	virtual_text = false,
 })
 
 opt.expandtab = true
