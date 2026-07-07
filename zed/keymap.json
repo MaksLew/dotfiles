@@ -15,7 +15,7 @@
     "bindings": {
       "space f": "file_finder::Toggle",
       "space r": "projects::OpenRecent",
-      "space b": "tab_switcher::Toggle",
+      ";": "tab_switcher::Toggle",
       "space p": "pane::TogglePinTab",
       "space g d": "git::Diff",
 

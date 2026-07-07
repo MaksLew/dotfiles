@@ -17,7 +17,7 @@
   "relative_line_numbers": "enabled",
   "cursor_blink": false,
   "format_on_save": "on",
-  "colorize_brackets": true,
+  "colorize_brackets": false,
   "show_wrap_guides": true,
   "selection_highlight": false,
   "inlay_hints": {
