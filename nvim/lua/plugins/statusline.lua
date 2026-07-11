@@ -2,6 +2,37 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
 	config = function()
+		local mode_color = function()
+			local colors = vim.o.background == "light" and {
+				blue = "#2d539e",
+				green = "#668e3d",
+				mauve = "#7759b4",
+				yellow = "#c57339",
+				pink = "#cc3768",
+				peach = "#c67439",
+				teal = "#3f83a6",
+			} or require("catppuccin.palettes").get_palette("mocha")
+			local mode_colors = {
+				n = colors.blue,
+				i = colors.green,
+				v = colors.mauve,
+				V = colors.mauve,
+				["\22"] = colors.mauve, -- visual block
+				c = colors.yellow,
+				s = colors.pink,
+				S = colors.pink,
+				["\19"] = colors.pink, -- select block
+				R = colors.peach,
+				r = colors.peach,
+				t = colors.teal,
+			}
+			return {
+				fg = mode_colors[vim.fn.mode()] or colors.blue,
+				bg = "NONE",
+				gui = "none",
+			}
+		end
+
 		require("lualine").setup({
 			options = {
 				section_separators = "",
@@ -15,30 +46,31 @@ return {
 				lualine_a = {
 					{
 						"mode",
-						color = { gui = "none" },
+						color = mode_color,
+						fmt = function(mode)
+							return mode:sub(1, 1)
+						end,
 					},
 				},
-				lualine_b = {
-					{
-						"diagnostics",
-						symbols = { error = "E", warn = "W", info = "I", hint = "H" },
-					},
-				},
+				lualine_b = {},
 				lualine_c = {
 					{
 						"filename",
+						color = mode_color,
 					},
 				},
-				lualine_x = {
-					"branch",
-				},
+				lualine_x = {},
 				lualine_y = {
-					"diff",
+					{
+						"diagnostics",
+						symbols = { error = "E", warn = "W", info = "I", hint = "H" },
+						color = mode_color,
+					},
 				},
 				lualine_z = {
 					{
 						"location",
-						color = { gui = "none" },
+						color = mode_color,
 					},
 				},
 			},
