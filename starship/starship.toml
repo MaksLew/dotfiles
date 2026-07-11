@@ -11,9 +11,11 @@ vimcmd_replace_symbol = "[<](bold purple)"
 vimcmd_replace_one_symbol = "[<](bold purple)"
 
 [git_commit]
+disabled = true
 tag_symbol = " tag "
 
 [git_status]
+disabled = true
 ahead = ">"
 behind = "<"
 diverged = "<>"
@@ -107,6 +109,7 @@ truncation_symbol = "..."
 symbol = "gcp "
 
 [git_branch]
+disabled = true
 symbol = "git "
 truncation_symbol = "..."
 
@@ -330,3 +333,8 @@ symbol = "xmake "
 
 [zig]
 symbol = "zig "
+
+[custom.jj]
+when = "jj-starship detect"
+shell = ["jj-starship", "--no-symbol"]
+format = "$output "
