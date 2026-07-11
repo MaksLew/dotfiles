@@ -8,6 +8,8 @@ return {
 			["<Tab>"] = { "select_next", "fallback" },
 			["<S-Tab>"] = { "select_prev", "fallback" },
 			["<CR>"] = { "select_and_accept", "fallback" },
+			["<C-u>"] = { "scroll_documentation_up", "fallback" },
+			["<C-d>"] = { "scroll_documentation_down", "fallback" },
 		},
 		sources = {
 			default = { "lsp", "path" },
@@ -32,16 +34,27 @@ return {
 				},
 			},
 			menu = {
+				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+				scrolloff = 2,
 				draw = {
-					columns = {
-						{ "label" },
-						{ "kind", gap = 1 },
+					columns = { { "label", "kind", gap = 1 } },
+					components = {
+						label = {
+							width = { fill = true, max = 60 },
+						},
+						kind = {
+							width = { fill = false },
+						},
 					},
 				},
 			},
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 400,
+			},
 		},
 		signature = {
-			enabled = true,
+			enabled = false,
 			trigger = {
 				show_on_trigger_character = false,
 				show_on_insert_on_trigger_character = false,
