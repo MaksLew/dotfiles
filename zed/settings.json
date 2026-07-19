@@ -106,8 +106,8 @@
   },
   "terminal": {
     "font_size": 13.0,
-    "font_family": "JetBrainsMono Nerd Font Mono",
-    "font_weight": 400.0,
+    "font_family": "GoogleSansCode Nerd Font Mono",
+    "font_weight": 500.0,
     "dock": "bottom",
     "button": false,
   },
@@ -179,12 +179,13 @@
   },
 
   // Apperance & Theme
+  "text_rendering_mode": "subpixel",
   "ui_font_size": 14.0,
   "ui_font_family": "IBM Plex Sans",
   "buffer_font_size": 13.0,
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_weight": 300.0,
-  "buffer_line_height": "standard",
+  "buffer_font_weight": 500.0,
+  "buffer_line_height": "comfortable",
   "theme": "Catppuccin Mocha - No Italics",
   "icon_theme": "Colored Zed Icons Theme Dark",
 
