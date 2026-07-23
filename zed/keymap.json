@@ -17,7 +17,7 @@
       "space r": "projects::OpenRecent",
       ";": "tab_switcher::Toggle",
       "space p": "pane::TogglePinTab",
-      "space g d": "git::Diff",
+      "space d": "git::Diff",
 
       "g w": "vim::HelixJumpToWord",
 
@@ -76,7 +76,7 @@
     },
   },
 
-  // Pane switching
+  // Pane manipulation
   {
     "context": "Editor || Terminal || Dock",
     "bindings": {
@@ -84,6 +84,8 @@
       "alt-l": "workspace::ActivatePaneRight",
       "alt-k": "workspace::ActivatePaneUp",
       "alt-j": "workspace::ActivatePaneDown",
+
+      "alt-x": "pane::CloseActiveItem",
     },
   },
 
