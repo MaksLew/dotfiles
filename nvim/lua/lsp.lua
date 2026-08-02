@@ -106,6 +106,12 @@ local function configure()
 		root_markers = { "Cargo.toml", ".git" },
 	})
 
+	vim.lsp.config("nil_ls", {
+		cmd = { "nil" },
+		filetypes = { "nix" },
+		root_markers = { "flake.nix", "default.nix", "shell.nix", ".git" },
+	})
+
 	vim.lsp.config("tinymist", {
 		cmd = { "tinymist" },
 		filetypes = { "typst" },
@@ -125,16 +131,10 @@ local function configure()
 		severity_sort = true,
 	})
 
-	vim.lsp.enable({ "lua_ls", "ty", "rust_analyzer", "tinymist" })
+	vim.lsp.enable({ "lua_ls", "ty", "rust_analyzer", "nil_ls", "tinymist" })
 end
 
-vim.api.nvim_create_autocmd("FileType", {
-	group = group,
-	pattern = { "lua", "python", "rust", "typst" },
-	callback = function()
-		vim.defer_fn(configure, 100)
-	end,
-})
+configure()
 
 vim.api.nvim_create_autocmd("BufEnter", {
 	group = group,

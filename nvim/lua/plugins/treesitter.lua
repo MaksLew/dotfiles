@@ -11,6 +11,7 @@ return {
 				"typst",
 				"vim",
 				"vimdoc",
+				"nix",
 			})
 			:wait(300000)
 	end,
