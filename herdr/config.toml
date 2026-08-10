@@ -1,0 +1,93 @@
+onboarding = false
+
+[theme]
+auto_switch = true
+dark_name = "catppuccin"
+light_name = "terminal"
+
+[update]
+channel = "stable"
+version_check = true
+
+[keys]
+prefix = "ctrl+a"
+
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+shift+r"
+open_notification_target = "prefix+o"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+
+new_workspace = "prefix+shift+n"
+switch_workspace = "prefix+shift+1..9"
+navigate_workspace_up = "up"
+navigate_workspace_down = "down"
+
+new_tab = "prefix+c"
+switch_tab = "alt+1..9"
+rename_tab = "prefix+shift+t"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+close_tab = "prefix+shift+x"
+
+rename_pane = "prefix+shift+p"
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+split_vertical = "prefix+|"
+split_horizontal = "prefix+minus"
+close_pane = "prefix+x"
+zoom = "prefix+z"
+resize_mode = "prefix+r"
+
+navigate_pane_left = "h"
+navigate_pane_down = "j"
+navigate_pane_up = "k"
+navigate_pane_right = "l"
+
+focus_agent = "prefix+alt+1..9"
+
+toggle_sidebar = "prefix+b"
+
+
+[ui]
+sidebar_start_collapsed = false
+sidebar_collapsed_mode = "hidden"
+copy_on_select = true
+mouse_scroll_lines = 3
+confirm_close = true
+prompt_new_tab_name = true
+prompt_new_workspace_name = true
+pane_borders = true
+pane_scrollbars = false
+pane_gaps = true
+hide_tab_bar_when_single_tab = true
+tab_bar_position = "top"
+agent_panel_sort = "spaces"
+
+[ui.sidebar.agents]
+rows = [
+    ["state_text", "workspace"],
+    ["agent"]
+]
+
+[ui.sidebar.spaces]
+rows = [
+    ["state_text", "workspace"]
+]
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 1
+
+[ui.toast.herdr]
+position = "top-right"
+
+[experimental]
+kitty_graphics = false
+
+[advanced]
+scrollback_limit_bytes = 10000000

@@ -1,2 +1,7 @@
 **/.nvimlog
 **/.codex/
+
+/herdr/.plugins.lock
+/herdr/*.log
+/herdr/*.sock
+/herdr/session.json
