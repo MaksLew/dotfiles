@@ -3,9 +3,7 @@ theme = "catppuccin_mocha_transparent"
 [editor]
 auto-completion = true
 line-number = "relative"
-cursorline = true
 true-color = true
-# rulers = [80]
 color-modes = true
 default-yank-register = "+"
 
@@ -14,6 +12,7 @@ insert = "bar"
 
 [editor.lsp]
 display-inlay-hints = false
+display-progress-messages = true
 
 [editor.gutters]
 layout = ["diff", "diagnostics", "line-numbers", "spacer"]
@@ -32,14 +31,8 @@ render = true
 left = ["mode", "file-name", "spinner", "file-modification-indicator"]
 right = [
   "diagnostics",
-  "version-control",
   "position",
 ]
-
-[editor.statusline.mode]
-normal = "N"
-insert = "I"
-select = "S"
 
 [keys.normal]
 D = ["kill_to_line_end"]
@@ -51,6 +44,7 @@ esc = ["collapse_selection"]
 " " = { "|" = ":vsplit", "-" = ":hsplit" }
 "[" = { b = ":buffer-previous" }
 "]" = { b = ":buffer-next" }
+";" = "buffer_picker"
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]

@@ -2,7 +2,6 @@ inherits = "catppuccin_mocha"
 
 "ui.background" = {}
 
-
 "comment" = { fg = "overlay2", modifiers = [] }
 "variable.parameter" = { fg = "maroon", modifiers = [] }
 "keyword.control.conditional" = { fg = "mauve", modifiers = [] }
@@ -11,6 +10,10 @@ inherits = "catppuccin_mocha"
 "markup.bold" = { fg = "red", modifiers = [] }
 "markup.italic" = { fg = "red", modifiers = [] }
 "markup.link.url" = { fg = "blue", modifiers = [] }
+
+"ui.statusline" = { fg = "subtext1", bg = "#00000000" }
+"ui.statusline.inactive" = { fg = "surface1", bg = "#00000000" }
+"ui.linenr" = { fg = "overlay0" }
 
 [palette]
 rosewater = "#f5e0dc"
