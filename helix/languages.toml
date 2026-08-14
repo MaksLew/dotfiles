@@ -23,3 +23,11 @@ language-servers = ["nil"]
 
 [language-server.nil]
 command = "nil"
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+
+[language-server.tinymist]
+command = "tinymist"
+
