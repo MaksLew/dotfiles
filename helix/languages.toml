@@ -16,3 +16,10 @@ command = "rust-analyzer"
 
 [language-server.rust-analyzer.config]
 check.command = "clippy"
+
+[[language]]
+name = "nix"
+language-servers = ["nil"]
+
+[language-server.nil]
+command = "nil"
