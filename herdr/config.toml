@@ -52,6 +52,30 @@ focus_agent = "prefix+alt+1..9"
 
 toggle_sidebar = "prefix+b"
 
+[[keys.command]]
+key = "prefix+shift+g"
+type = "popup"
+command = "jjui"
+description = "run jjui"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "exec \"${SHELL:sh}\""
+description = "scratch"
+width = "90%"
+height = "90%"
+
+
+[[keys.command]]
+key = "prefix+d"
+type = "popup"
+command = "ftdv"
+description = "diff"
+width = "90%"
+height = "90%"
 
 [ui]
 sidebar_start_collapsed = false
