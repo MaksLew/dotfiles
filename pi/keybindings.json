@@ -1,3 +1,7 @@
 {
-	"tui.editor.deleteWordBackward": ["ctrl+w", "alt+backspace", "ctrl+backspace"]
+	"tui.editor.deleteWordBackward": ["ctrl+w", "alt+backspace", "ctrl+backspace"],
+	"tui.select.up": ["up", "shift+tab"],
+	"tui.select.down": ["down", "tab"],
+	"tui.select.confirm": ["enter", "return"],
+	"app.thinking.cycle": "ctrl+tab"
 }

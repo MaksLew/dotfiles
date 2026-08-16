@@ -19,6 +19,8 @@ maximize = true
 command = /usr/bin/fish --interactive
 copy-on-select = clipboard
 
+keybind = ctrl+tab=unbind
+
 gtk-single-instance = true
 
 quit-after-last-window-closed = true
