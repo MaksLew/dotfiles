@@ -17,7 +17,7 @@ require("nvim-surround").buffer_setup({
 	},
 })
 
-local expr_opts = { buffer = true, expr = true }
+local expr_opts = { buf = 0, expr = true }
 
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
@@ -86,6 +86,6 @@ local function toggle_math_spacing()
 end
 
 vim.keymap.set("n", "<leader>m", toggle_math_spacing, {
-	buffer = true,
+	buf = 0,
 	desc = "Toggle Typst math spacing",
 })

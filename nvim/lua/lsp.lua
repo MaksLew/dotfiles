@@ -152,7 +152,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			pin_typst_main(ev.buf)
 		end
 
-		local opts = { buffer = ev.buf }
+		local opts = { buf = ev.buf }
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Go to definition" }))
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set(
