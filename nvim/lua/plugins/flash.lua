@@ -1,7 +1,13 @@
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
+	config = function(_, opts)
+		require("flash").setup(opts)
+		vim.api.nvim_set_hl(0, "FlashMatch", { fg = "#f38ba8", bold = true })
+		vim.api.nvim_set_hl(0, "FlashLabel", { fg = "#f38ba8", bold = true })
+	end,
 	opts = {
+		prompt = { enabled = false },
 		modes = {
 			search = {
 				enabled = false,
