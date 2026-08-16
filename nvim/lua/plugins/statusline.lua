@@ -3,15 +3,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		local mode_color = function()
-			local colors = vim.o.background == "light" and {
-				blue = "#2d539e",
-				green = "#668e3d",
-				mauve = "#7759b4",
-				yellow = "#c57339",
-				pink = "#cc3768",
-				peach = "#c67439",
-				teal = "#3f83a6",
-			} or require("catppuccin.palettes").get_palette("mocha")
+			local colors = require("catppuccin.palettes").get_palette("mocha")
 			local mode_colors = {
 				n = colors.blue,
 				i = colors.green,

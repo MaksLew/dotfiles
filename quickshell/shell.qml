@@ -253,6 +253,7 @@ ShellRoot {
                 Separator {}
                 BarText {
                     text: root.network
+                    rightPadding: 10
                     accent: root.network === "No connection " ? root.yellow : root.mauve
                     MouseArea { anchors.fill: parent; cursorShape: Qt.PointingHandCursor; onClicked: root.run(Quickshell.shellDir + "/network-manager.sh") }
                 }
