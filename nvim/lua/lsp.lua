@@ -103,7 +103,12 @@ local function configure()
 	vim.lsp.config("rust_analyzer", {
 		cmd = { "rust-analyzer" },
 		filetypes = { "rust" },
-		root_markers = { "Cargo.toml", ".git" },
+		root_dir = function(bufnr, on_dir)
+			local path = vim.api.nvim_buf_get_name(bufnr)
+			if not path:find("/.rustup/toolchains/", 1, true) then
+				on_dir(vim.fs.root(bufnr, { "Cargo.toml", ".git" }))
+			end
+		end,
 	})
 
 	vim.lsp.config("nil_ls", {
