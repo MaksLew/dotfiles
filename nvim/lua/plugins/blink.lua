@@ -10,6 +10,7 @@ return {
 			["<CR>"] = { "select_and_accept", "fallback" },
 			["<C-u>"] = { "scroll_documentation_up", "fallback" },
 			["<C-d>"] = { "scroll_documentation_down", "fallback" },
+			["<C-space>"] = { "show_documentation", "hide_documentation" },
 		},
 		sources = {
 			default = { "lsp", "path" },
@@ -49,8 +50,7 @@ return {
 				},
 			},
 			documentation = {
-				auto_show = true,
-				auto_show_delay_ms = 400,
+				auto_show = false,
 			},
 		},
 		signature = {
