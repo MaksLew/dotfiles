@@ -13,20 +13,19 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "space f": "file_finder::Toggle",
-      "space r": "projects::OpenRecent",
+      "alt-f": "file_finder::Toggle",
+      "alt-r": "projects::OpenRecent",
       ";": "tab_switcher::Toggle",
-      "space p": "pane::TogglePinTab",
-      "space d": "git::Diff",
+      "alt-d": "git::Diff",
 
       "g w": "vim::HelixJumpToWord",
 
       "alt-x": "pane::CloseActiveItem",
 
-      "ctrl-`": "terminal_panel::Toggle",
-      "ctrl-g": "git_panel::Toggle",
-      "ctrl-a": "agent::Toggle",
-      "ctrl-e": "project_panel::Toggle",
+      "alt-`": "terminal_panel::Toggle",
+      "alt-g": "git_panel::Toggle",
+      "alt-a": "agent::Toggle",
+      "alt-e": "project_panel::Toggle",
 
       "g s": "outline::Toggle",
       "g c": ["editor::ToggleComments", { "advance_downwards": false }],
@@ -37,7 +36,7 @@
   {
     "context": "GitPanel",
     "bindings": {
-      "ctrl-g": "git_panel::Close",
+      "alt-g": "git_panel::Close",
       "q": "git_panel::Close",
       "d": "git::Diff",
     },
@@ -53,7 +52,7 @@
   {
     "context": "AgentPanel",
     "bindings": {
-      "ctrl-a": "workspace::ToggleRightDock",
+      "alt-a": "workspace::ToggleRightDock",
     },
   },
 
@@ -61,9 +60,9 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-`": "terminal_panel::Toggle",
-      "ctrl-g": "git_panel::Toggle",
-      "ctrl-e": "project_panel::Toggle",
+      "alt-`": "terminal_panel::Toggle",
+      "alt-g": "git_panel::Toggle",
+      "alt-e": "project_panel::Toggle",
     },
   },
 
@@ -71,7 +70,7 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "ctrl-e": "workspace::ToggleLeftDock",
+      "alt-e": "workspace::ToggleLeftDock",
       "q": "workspace::ToggleLeftDock",
     },
   },
