@@ -89,6 +89,7 @@ local function exec(keys, command, flags)
 end
 
 exec(mainMod .. " + RETURN", terminal .. " +new-window")
+exec(mainMod .. " + Z", "zed")
 hl.bind(mainMod .. " + X", hl.dsp.window.close())
 exec(
 	mainMod .. " + Q",
