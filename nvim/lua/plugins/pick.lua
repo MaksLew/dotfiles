@@ -5,7 +5,11 @@ return {
 		{
 			"<leader>f",
 			function()
-				require("mini.pick").builtin.files()
+				require("mini.pick").builtin.cli({
+					command = { "rg", "--files", "--hidden" },
+				}, {
+					source = { name = "Files" },
+				})
 			end,
 			desc = "Find files",
 		},
