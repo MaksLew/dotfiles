@@ -154,7 +154,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	group = group,
 	callback = function(ev)
 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
-		if client and client.name == "tinymist" then
+		if client and client.name == "rust_analyzer" then
+			vim.lsp.semantic_tokens.enable(false, { client_id = client.id })
+		elseif client and client.name == "tinymist" then
 			pin_typst_main(ev.buf)
 		end
 

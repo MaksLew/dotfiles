@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	branch = "main",
-	event = "VeryLazy",
+	lazy = false,
 	build = function()
 		require("nvim-treesitter")
 			.install({
