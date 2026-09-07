@@ -15,7 +15,7 @@
     "bindings": {
       "alt-f": "file_finder::Toggle",
       "alt-r": "projects::OpenRecent",
-      ";": "tab_switcher::Toggle",
+      "ctrl-tab": "tab_switcher::Toggle",
       "alt-d": "git::Diff",
 
       "g w": "vim::HelixJumpToWord",
