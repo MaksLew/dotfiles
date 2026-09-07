@@ -139,6 +139,13 @@ exec("XF86AudioPause", "playerctl play-pause", { locked = true })
 exec("XF86AudioPlay", "playerctl play-pause", { locked = true })
 exec("XF86AudioPrev", "playerctl previous", { locked = true })
 
+hl.layer_rule({
+	name = "blur-quickshell",
+	match = { namespace = "quickshell" },
+	blur = true,
+	ignore_alpha = 0.1,
+})
+
 hl.window_rule({
 	name = "suppress-maximize-events",
 	match = { class = ".*" },
