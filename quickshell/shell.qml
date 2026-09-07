@@ -8,7 +8,7 @@ import Quickshell.Services.UPower
 ShellRoot {
     id: root
 
-    readonly property color base: "#1e1e2e"
+    readonly property color base: "#d91e1e2e"
     readonly property color text: "#cdd6f4"
     readonly property color surface2: "#585b70"
     readonly property color overlay1: "#7f849c"
@@ -205,13 +205,15 @@ ShellRoot {
                     text: " " + root.temperature + "°C"
                     accent: Number(root.temperature) >= 80 ? root.red : root.pink
                 }
-                Separator {}
+                BarText { text: " " }
             }
 
             Row {
+                id: center
                 anchors { horizontalCenter: parent.horizontalCenter; top: parent.top; bottom: parent.bottom }
                 spacing: 6
 
+                BarText { text: " " }
                 BarText {
                     text: " " + Qt.formatDateTime(clock.date, root.alternateClock ? "yyyy-MM-dd HH:mm" : "dddd, dd MMMM HH:mm")
                     accent: root.yellow
@@ -219,13 +221,15 @@ ShellRoot {
                 }
                 Separator {}
                 BarText { text: root.weather; accent: "#ffffff" }
+                BarText { text: " " }
             }
 
             Row {
+                id: right
                 anchors { right: parent.right; top: parent.top; bottom: parent.bottom; rightMargin: 2 }
                 spacing: 6
 
-                Separator {}
+                BarText { text: " " }
                 BarText {
                     readonly property var battery: UPower.displayDevice
                     readonly property int percent: battery ? Math.round(battery.percentage * 100) : 0
@@ -257,6 +261,12 @@ ShellRoot {
                     accent: root.network === "No connection " ? root.yellow : root.mauve
                     MouseArea { anchors.fill: parent; cursorShape: Qt.PointingHandCursor; onClicked: root.run(Quickshell.shellDir + "/network-manager.sh") }
                 }
+            }
+
+            Rectangle {
+                anchors { left: parent.left; right: parent.right; bottom: parent.bottom }
+                height: 2
+                color: "#313244"
             }
         }
     }
