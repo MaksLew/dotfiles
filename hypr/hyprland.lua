@@ -46,7 +46,7 @@ hl.config({
 			vibrancy = 0.1696,
 		},
 	},
-	animations = { enabled = false },
+	animations = { enabled = true },
 	dwindle = { preserve_split = true },
 	master = { new_status = "master" },
 	misc = {
